@@ -1,0 +1,15 @@
+Host *
+    IdentityFile ~/.ssh/id_rsa
+    UseKeychain yes
+    AddKeysToAgent yes
+
+Host someserver.com
+    User username
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/public-key-name
+    UseKeychain yes
+    AddKeysToAgent yes
+
+Host retropie
+    HostName 10.X.X.XX
+    User pi
