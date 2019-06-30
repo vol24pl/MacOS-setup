@@ -97,8 +97,8 @@ appStoreApps=(
     1278508951 # Trello (Project management tool)
     688211836 # EasyRes (resolution changer for retina)
     1453837387 # Rubicon. Xcode extension for Stub, Spy and Dummy
-	1330801220 # quicktype. JSON to Code generator
-	430798174 # HazeOver. App that dims unfocused windows.
+    1330801220 # quicktype. JSON to Code generator
+    430798174 # HazeOver. App that dims unfocused windows.
 )
 
 # Install AppStore apps
@@ -122,18 +122,18 @@ defaults write com.apple.dock persistent-apps -array
 
 # List of dock icons
 dockIcons=(
-	Utilities/Terminal.app
-	Mail.app
-	Messages.app
-	Slack.app
-	Safari.app
-	iTunes.app
-	Bear.app
-	Things3.app
-	Fantastical 2.app
-	BBEdit.app
-	Sourcetree.app
-	Xcode.app
+    Utilities/Terminal.app
+    Mail.app
+    Messages.app
+    Slack.app
+    Safari.app
+    iTunes.app
+    Bear.app
+    Things3.app
+    Fantastical 2.app
+    BBEdit.app
+    Sourcetree.app
+    Xcode.app
 )
 
 # Adding icons
