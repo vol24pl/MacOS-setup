@@ -73,10 +73,10 @@ brew install mas
 
 # list of AppStore apps
 appStoreApps=(
-    929507092 # PhotoScape X - Photo Editor
+    929507092 # PhotoScape X (Photo Editor)
     593341977 # PDF Attributes (PDF metadata editor)
     497799835 # Xcode (Apple IDE)
-    1333542190 # 1Password 7 - Password Manager
+    1333542190 # 1Password 7 (Password Manager)
     1091189122 # Bear (Notes with markdown support)
     904280696 # Things 3 (TODO app)
     975937182 # Fantastical 2 (Calendar app)                                 
@@ -96,9 +96,9 @@ appStoreApps=(
     673660806 # Controllers Lite (Gamepads diagnostics app)
     1278508951 # Trello (Project management tool)
     688211836 # EasyRes (resolution changer for retina)
-    1453837387 # Rubicon. Xcode extension for Stub, Spy and Dummy
-    1330801220 # quicktype. JSON to Code generator
-    430798174 # HazeOver. App that dims unfocused windows.
+    1453837387 # Rubicon (Xcode extension for Stub, Spy and Dummy)
+    1330801220 # quicktype (JSON to Code generator)
+    430798174 # HazeOver (App that dims unfocused windows.)
 )
 
 # Install AppStore apps
@@ -142,6 +142,9 @@ do
     echo "Adding $icon to the dock…"
     defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$icon</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
 done
+
+echo "Setting up dock size…"
+defaults write com.apple.dock tilesize -int 40
 
 echo "Restarting dock…"
 killall Dock
