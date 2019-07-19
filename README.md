@@ -15,5 +15,5 @@ If something goes wrong look for tips in `other/setup-hotfixes.sh`
 - [ ] Install [Additional Tools for Xcode](https://developer.apple.com/download/more/) and enable AAC (max bitrate)
 - [ ] Setup UEFI firmware password and set booting to the strickest setting (only Apple-Signed code)
 - [ ] Change monotype font everywhere to: `SF Mono 12`
-- [ ] Fix SourceTree to work with GPG keys, by setting GPG program to `/usr/local/bin`
+- [ ] Fix SourceTree to work with GPG keys, by setting GPG Program to `/usr/local/bin`. If you cannot select this path by "Browse…" button, make a symbolic link to it and select the symbolic link instead. 
 ![SourceTree fix](./images/sourcetree-fix.png)
