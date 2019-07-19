@@ -111,7 +111,7 @@ appStoreApps=(
 mas install ${appStoreApps[@]}
 
 # Install terminal colors for Bash (choose between light and dark theme)
-echo -e "export CLICOLOR=1\n#light theme\nexport LSCOLORS=ExFxBxDxCxegedabagacad\n#dark theme\n#export LSCOLORS=GxFxCxDxBxegedabagaced" > ~/.bash_profile
+echo -e "export CLICOLOR=1\n#light theme\nexport LSCOLORS=ExFxBxDxCxegedabagacad\n#dark theme\n#export LSCOLORS=GxFxCxDxBxegedabagaced" >> ~/.bash_profile
 
 # Change login shell to zsh. This is default shell for MacOS Catalina and above, this is only for legacy systems
 chsh -s /bin/zsh
@@ -123,6 +123,12 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 echo -e 'export LSCOLORS="ExFxBxDxCxegedabagacad"' >> ~/.zshrc
 echo -e 'export LS_COLORS="di=1;34:ln=1;35:so=1;31:pi=1;33:ex=1;32:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"' >> ~/.zshrc
 echo -e "zstyle ':completion:*:default' list-colors \${(s.:.)LS_COLORS}" >> ~/.zshrc
+
+# Replaces default theme with jreese theme (works with light theme)
+sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="jreese"/g' ~/.zshrc
+
+# Uncomment en_US.UTF-8 locale for console, making them undependable from macOS locale settings
+sed -i -e 's/#export LANG=en_US.UTF-8/export LANG=en_US.UTF-8/g' ~/.zshrc
 
 # Disable mouse acceleration with defaults
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
@@ -199,3 +205,6 @@ cp ./other/prism-xcode.css /Applications/MacDown.app/Contents/Resources/Prism/th
 
 # make SourceTree see our GPG binary file (it searches for gpg2)
 ln -s /usr/local/bin/gpg /usr/local/bin/gpg2
+# Set your PGP key for git. WARNING: You need to replace the <KeyIdVALUE> with the actual GPG key id.
+git config --global user.signingkey <KeyIdVALUE>
+
