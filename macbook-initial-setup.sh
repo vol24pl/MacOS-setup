@@ -74,6 +74,9 @@ brew cask install ${nonAppStoreApps[@]}
 # Install AppStore CLI installer
 brew install mas
 
+# Install Battle.net
+open /usr/local/Caskroom/battle-net/latest/Battle.net-Setup.app
+
 # list of AppStore apps
 appStoreApps=(
     929507092 # PhotoScape X (Photo Editor)
@@ -107,8 +110,19 @@ appStoreApps=(
 # Install AppStore apps
 mas install ${appStoreApps[@]}
 
-# Install terminal colors (choose between light and dark theme)
+# Install terminal colors for Bash (choose between light and dark theme)
 echo -e "export CLICOLOR=1\n#light theme\nexport LSCOLORS=ExFxBxDxCxegedabagacad\n#dark theme\n#export LSCOLORS=GxFxCxDxBxegedabagaced" > ~/.bash_profile
+
+# Change login shell to zsh. This is default shell for MacOS Catalina and above, this is only for legacy systems
+chsh -s /bin/zsh
+
+#Install Oh-My-Zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install terminal colors for zsh (light theme)
+echo -e 'export LSCOLORS="ExFxBxDxCxegedabagacad"' >> ~/.zshrc
+echo -e 'export LS_COLORS="di=1;34:ln=1;35:so=1;31:pi=1;33:ex=1;32:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"' >> ~/.zshrc
+echo -e "zstyle ':completion:*:default' list-colors \${(s.:.)LS_COLORS}" >> ~/.zshrc
 
 # Disable mouse acceleration with defaults
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
@@ -157,6 +171,7 @@ brewPackages=(
     swiftlint # linter for swift language
     carthage # dependency manager for iOS apps
     python # Python version 3.7, preinstalled is 2.7
+    gnupg # OpenPGP for signing and encrypting
 )
 
 # install brew packages
@@ -181,3 +196,6 @@ ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Developer ~/Developer\ sym
 
 # add Xcode style to Prism inside MacDown
 cp ./other/prism-xcode.css /Applications/MacDown.app/Contents/Resources/Prism/themes/prism-xcode.css
+
+# make SourceTree see our GPG binary file (it searches for gpg2)
+ln -s /usr/local/bin/gpg /usr/local/bin/gpg2
