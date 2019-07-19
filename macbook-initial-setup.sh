@@ -200,10 +200,10 @@ ln -s ~/Desktop ~/Desktop\ symlink
 mkdir ~/Library/Mobile\ Documents/com~apple~CloudDocs/Developer
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Developer ~/Developer\ symlink
 
-# add Xcode style to Prism inside MacDown
+# Add Xcode style to Prism inside MacDown
 cp ./other/prism-xcode.css /Applications/MacDown.app/Contents/Resources/Prism/themes/prism-xcode.css
 
-# make SourceTree see our GPG binary file (it searches for gpg2)
+# Make SourceTree see our GPG binary file (it searches for gpg2)
 ln -s /usr/local/bin/gpg /usr/local/bin/gpg2
 # Set your PGP key for git. WARNING: You need to replace the <KeyIdVALUE> with the actual GPG key id.
 git config --global user.signingkey <KeyIdVALUE>
