@@ -1,7 +1,7 @@
 # Change the ownership of /usr/local/lib/pkgconfig to your user (needed for mas to work)
 sudo chown -R $(whoami) /usr/local/lib/pkgconfig 
 
-# Fix Carthage
+# Use Xcode Command Line Tools from Xcode.app (Fix Carthage)
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
 # Fix brew
