@@ -11,51 +11,51 @@ brew tap homebrew/cask-versions
 
 # list of non-AppStore apps
 nonAppStoreApps=(
-    transmission # torrents client
-    skype # communicator
-    keka # rar extractor
-    google-chrome # browser
-    iina # video watching app
-    scroll-reverser # reverse scrolling setting separate for touchpad and mouse
-    vlc # video watching app
+    transmission # Torrents client
+    skype # Communicator
+    keka # Rar extractor
+    google-chrome # Browser
+    iina # Video watching app
+    scroll-reverser # Reverse scrolling setting separate for touchpad and mouse
+    vlc # Video watching app
     xquartz # X11 windows server needed for wine
-    wine-stable # app to open Windows .exe files
-    libreoffice # documents/spreadsheets/presentations editor
-    steelseries-engine # steelseries mouse drivers
-    bbedit # text editor
+    wine-stable # App to open Windows .exe files
+    libreoffice # Documents/spreadsheets/presentations editor
+    steelseries-engine # Steelseries mouse drivers
+    bbedit # Text editor
     sourcetree # GUI for git and gitflow
-    iterm2 # alternative terminal
-    macdown # markdown editor
+    iterm2 # Alternative terminal
+    macdown # Markdown editor
     sketch # UI/UX design tool
     zeplin # UI/UX designs viewer
-    bettertouchtool # custom gestures for touchpad and touchbar
+    bettertouchtool # Custom gestures for touchpad and touchbar
     AmorphousDiskMark # HDD benchmark
-    charles # web debugging proxy
-    kode54-cog # music and audio player
+    charles # Web debugging proxy
+    kode54-cog # Music and audio player
     cyberduck # FTP client
     drivedx # SMART status and HDD health tool
-    firefox # browser
-    calibre # mobi/epub e-book converter
-    gimp # image editor
+    firefox # Browser
+    calibre # Mobi/epub e-book converter
+    gimp # Image editor
     java # OPEN JDK for apps that needs java
     java8 # ORACLE java8
-    jubler # subtitles editor
-    opera # browser
+    jubler # Subtitles editor
+    opera # Browser
     postman # HTTP requests tool
-    spotify # music streaming service
+    spotify # Music streaming service
     tableplus # SQL client
-    tor-browser # browser preconfigured with TOR network
-    unetbootin # live USB systems maker
+    tor-browser # Browser preconfigured with TOR network
+    unetbootin # Live USB systems maker
     virtualbox # Virtual Machine
-    virtualbox-extension-pack # extensions for virtualbox such as display resolution and USB
-    xld # audio converter
+    virtualbox-extension-pack # Extensions for virtualbox such as display resolution and USB
+    xld # Audio converter
     sdformatter # SD card formatter recommanded by SD Association
-    musicbrainz-picard # audio tags editor
-    flixtools # subtitles downloader
+    musicbrainz-picard # Audio tags editor
+    flixtools # Subtitles downloader
     protonmail-bridge # Encryption bridge for Proton Mail
-    anki # app for learning with flashcards
-    visual-studio-code # electron based modern code editor
-    dotnet-sdk # dotnet language support
+    anki # App for learning with flashcards
+    visual-studio-code # Electron based modern code editor
+    dotnet-sdk # Dotnet language support
     sherlock # App to edit iOS Views on the fly
     steam # Gaming platform
     gog-galaxy # Gaming platform
@@ -174,10 +174,12 @@ killall Dock
 
 # List of brew packages
 brewPackages=(
-    swiftlint # linter for swift language
-    carthage # dependency manager for iOS apps
+    swiftlint # Linter for swift language
+    carthage # Dependency manager for iOS apps
     python # Python version 3.7, preinstalled is 2.7
     gnupg # OpenPGP for signing and encrypting
+    pinentry-mac # App to use keychain for PGP passwords
+    wget # Terminal network downloader
 )
 
 # install brew packages
@@ -205,6 +207,36 @@ cp ./other/prism-xcode.css /Applications/MacDown.app/Contents/Resources/Prism/th
 
 # Make SourceTree see our GPG binary file (it searches for gpg2)
 ln -s /usr/local/bin/gpg /usr/local/bin/gpg2
+
 # Set your PGP key for git. WARNING: You need to replace the <KeyIdVALUE> with the actual GPG key id.
 git config --global user.signingkey <KeyIdVALUE>
 
+# Add your GPG key to bash
+echo 'export GPG_TTY=$(tty)' >> ~/.bash_profile
+
+# Add your GPG key to zsh
+echo 'export GPG_TTY=$(tty)' >> ~/.zshrc
+
+# Make all commits signed by default
+git config --global commit.gpgsign true
+
+# Make pinentry-mac your default pientry choice
+echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+
+# Download PushNotifications zip - Notification Sender for Apple Push Notification Service
+wget https://github.com/onmyway133/PushNotifications/releases/download/1.4.0/PushNotifications-1.4.0-mac.zip -P ~/Downloads/
+
+# Unzip PushNotifications straight to Applications
+unzip ~/Downloads/PushNotifications-1.4.0-mac.zip -d /Applications/
+
+# Delete PushNotifications zip
+rm -rf ~/Downloads/PushNotifications-1.4.0-mac.zip 
+
+# Download SwiftInitGenerator zip - Xcode extension for generating inits code
+wget https://github.com/Atimca/SwiftInitGenerator/releases/download/0.0.1/SwiftInitGenerator.zip -P ~/Downloads/
+
+# Unzip SwiftInitGenerator straight to Applications
+unzip ~/Downloads/SwiftInitGenerator.zip -d /Applications/
+
+# Delete SwiftInitGenerator zip
+rm -rf ~/Downloads/SwiftInitGenerator.zip
