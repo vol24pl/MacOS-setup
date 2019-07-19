@@ -223,6 +223,10 @@ git config --global commit.gpgsign true
 # Make pinentry-mac your default pientry choice
 echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
 
+# Import GPG keys. WARNING: You need to replace the <Path to pub key> and <Path to prv key> with the actual paths.
+gpg --import <Path to pub key>
+gpg --allow-secret-key-import --import <Path to prv key>
+
 # Download PushNotifications zip - Notification Sender for Apple Push Notification Service
 wget https://github.com/onmyway133/PushNotifications/releases/download/1.4.0/PushNotifications-1.4.0-mac.zip -P ~/Downloads/
 
