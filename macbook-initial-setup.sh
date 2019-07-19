@@ -58,6 +58,9 @@ nonAppStoreApps=(
     dotnet-sdk # dotnet language support
     sherlock # App to edit iOS Views on the fly
     steam # Gaming platform
+    gog-galaxy # Gaming platform
+    battle-net # Gaming platform
+    origin # Gaming platform
     isimulator # App to manage iOS Simulators
     linein # App for redirecting audio
     soundflower # App giving additional audio sources
