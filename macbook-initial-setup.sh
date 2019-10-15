@@ -43,6 +43,7 @@ nonAppStoreApps=(
     jubler # Subtitles editor
     opera # Browser
     postman # HTTP requests tool
+    insomnia # HTTP requests tool that doesn't spy on you like Postman does :)
     spotify # Music streaming service
     tableplus # SQL client
     tor-browser # Browser preconfigured with TOR network
