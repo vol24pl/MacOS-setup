@@ -26,6 +26,7 @@ nonAppStoreApps=(
     sourcetree # GUI for git and gitflow
     iterm2 # Alternative terminal
     macdown # Markdown editor
+    typora # Markdown single pane editor
     sketch # UI/UX design tool
     zeplin # UI/UX designs viewer
     bettertouchtool # Custom gestures for touchpad and touchbar
