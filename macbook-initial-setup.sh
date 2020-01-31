@@ -116,7 +116,7 @@ appStoreApps=(
     1333542190 # 1Password 7 (Password Manager)
     1091189122 # Bear (Notes with markdown support)
     904280696 # Things 3 (TODO app)
-    975937182 # Fantastical 2 (Calendar app)                                 
+    975937182 # Fantastical 3 (Calendar app)
     1335413823 # Ka-Block! (Ads blocking Safari extension)
     768053424 # Gapplin (Vector images viewer/converter)
     803453959 # Slack (Communicator)
@@ -184,7 +184,7 @@ dockIcons=(
     /System/Applications/Music.app
     /Applications/Bear.app
     /Applications/Things3.app
-    "/Applications/Fantastical 2.app"
+    /Applications/Fantastical.app
     /Applications/Sourcetree.app
     /Applications/BBEdit.app
     "/Applications/Visual Studio Code.app"
