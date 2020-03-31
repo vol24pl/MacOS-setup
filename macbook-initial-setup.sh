@@ -109,7 +109,6 @@ brew install mas
 
 # list of AppStore apps
 appStoreApps=(
-#DaisyDisk
     929507092 # PhotoScape X (Photo Editor)
     593341977 # PDF Attributes (PDF metadata editor)
     497799835 # Xcode (Apple IDE)
@@ -135,6 +134,10 @@ appStoreApps=(
     1330801220 # quicktype (JSON to Code generator)
     430798174 # HazeOver (App that dims unfocused windows)
     425955336 # Skitch (App for marking pictures)
+    1081413713 # GIF Brewery 3 (Recording screen or camera stream as a GIF)
+    957734279 # Toggl (Time tracking app)
+    411643860 # Daisy Disk (App for recovering disk space)
+	1388020431 # DevCleaner for Xcode (App for deleting old Xcode files in ~/Library/Developer folder)
 #Unused
     # 985367838 # Microsoft Outlook (Email client)
     # 673660806 # Controllers Lite (Gamepads diagnostics app)
