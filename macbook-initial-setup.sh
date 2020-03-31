@@ -215,8 +215,14 @@ brewPackages=(
     pinentry-mac # App to use macOS native keychain for PGP passwords
     pandoc # Markup to Word/Open office converter needed by Typora
     pandoc-citeproc # Pandoc's citation parser
+    bash # newest bash version. System's default is 3
+    coreutils # GNU File, Shell, and Text utilities
+    dmg2img # Utilities for converting macOS DMG images
+    gzip  # Popular GNU data compression program
+    unzip # Extraction utility for .zip compressed archives
+    wget # Internet file retriever
+    mint # Dependency manager that installs and runs Swift command-line tool packages
 #Unused
-    # wget # Terminal network downloader
     # vapor/tap/vapor # backend framework
     # python # Python version 3.7, preinstalled is 2.7
 )
