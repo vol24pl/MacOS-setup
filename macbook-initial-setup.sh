@@ -230,6 +230,9 @@ brewPackages=(
 # install brew packages
 brew install ${brewPackages[@]}
 
+# As we installed homebrew before xcode, we need to switch to Xcode Command Line Tools
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
 # install CocoaPods dependency manager for iOS apps
 sudo gem install cocoapods
 
@@ -298,6 +301,3 @@ brew upgrade
 brew cask upgrade
 brew cleanup
 rm -rf ~/Library/Caches/Homebrew
-
-# As we installed homebrew before xcode, we need to switch to Xcode Command Line Tools
-sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
