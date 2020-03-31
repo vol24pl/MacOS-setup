@@ -233,6 +233,13 @@ brew install ${brewPackages[@]}
 # As we installed homebrew before xcode, we need to switch to Xcode Command Line Tools
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
+# List of mint packages
+mintPackages=(
+    MakeAWishFoundation/SwiftyMocky # Library to autogenerate mocks
+)
+
+mint install ${mintPackages[@]}
+
 # install CocoaPods dependency manager for iOS apps
 sudo gem install cocoapods
 
