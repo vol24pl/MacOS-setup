@@ -281,7 +281,7 @@ gpg --allow-secret-key-import --import <Path to prv key>
 echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
 
 # Make SourceTree see our GPG binary file (it searches for gpg2). This should automatically choose the current version
-ln -s /usr/local/Cellar/gnupg/`ls /usr/local/Cellar/gnupg/`/bin/gpg /usr/local/Cellar/gnupg/`ls /usr/local/Cellar/gnupg/`/bin/gpg3
+ln -s /usr/local/Cellar/gnupg/`ls /usr/local/Cellar/gnupg/`/bin/gpg /usr/local/Cellar/gnupg/`ls /usr/local/Cellar/gnupg/`/bin/gpg2
 
 # Configure git
 
