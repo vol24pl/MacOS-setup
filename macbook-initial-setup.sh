@@ -40,6 +40,7 @@ nonAppStoreApps=(
     AmorphousDiskMark # HDD benchmarking tool
     balenaetcher # creating USB drives
     sdformatter # SD card formatter recommended by SD Association
+    ApplePi-Baker # App for making the binary image copies of the whole drives
 #Video
     iina # Best looking macOS video watching app
     vlc # Most popular cross-platform video watching app
@@ -119,7 +120,6 @@ appStoreApps=(
     1335413823 # Ka-Block! (Ads blocking Safari extension)
     768053424 # Gapplin (Vector images viewer/converter)
     803453959 # Slack (Communicator)
-    405399194 # Kindle (Mobi file format reader)
     462054704 # Microsoft Word (Documents editor)
     462058435 # Microsoft Excel (Spreadsheets editor)
     462062816 # Microsoft PowerPoint (Presentations editor)
@@ -137,8 +137,10 @@ appStoreApps=(
     1081413713 # GIF Brewery 3 (Recording screen or camera stream as a GIF)
     957734279 # Toggl (Time tracking app)
     411643860 # Daisy Disk (App for recovering disk space)
-	1388020431 # DevCleaner for Xcode (App for deleting old Xcode files in ~/Library/Developer folder)
+    1388020431 # DevCleaner for Xcode (App for deleting old Xcode files in ~/Library/Developer folder)
 #Unused
+    # 682658836 # Garage Band (App for creating and learning music)
+    # 405399194 # Kindle (Mobi file format reader)
     # 985367838 # Microsoft Outlook (Email client)
     # 673660806 # Controllers Lite (Gamepads diagnostics app)
 )
