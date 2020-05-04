@@ -152,6 +152,9 @@ echo -e "export CLICOLOR=1\n#light theme\nexport LSCOLORS=ExFxBxDxCxegedabagacad
 #Install Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+#Fix Catalina bug with "Insecure completion-dependent directories detected"
+compaudit | xargs chmod g-w,o-w
+
 # Install terminal colors for zsh (light theme)
 # Use this generator to translate BSD colors and Linux colors: https://geoff.greer.fm/lscolors/
 echo -e 'export LSCOLORS="ExFxBxDxCxegedabagacad"' >> ~/.zshrc
