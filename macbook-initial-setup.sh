@@ -26,6 +26,7 @@ nonAppStoreApps=(
     iterm2 # Alternative terminal
     sketch # UI/UX design tool
     zeplin # UI/UX design viewer
+    avocode # UI/UX design tool
     typora # Markdown single pane editor
     sourcetree # GUI for git and gitflow
     sherlock # App to edit iOS Views on the fly
