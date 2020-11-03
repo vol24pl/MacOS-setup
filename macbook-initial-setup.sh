@@ -18,7 +18,7 @@ nonAppStoreApps=(
     tor-browser # Browser preconfigured with TOR network
 #Developer
     postman # Most popular HTTP requests tool
-    visual-studio-code # Modern code editor with community-driven plugins
+    visual-studio-code # Electron-based code editor with community-driven plugins developed by Microsoft
     tableplus # Modern SQL client
     bbedit # Most stable macOS text editor that can handle huge files
     charles # Web debugging proxy
@@ -29,7 +29,6 @@ nonAppStoreApps=(
     avocode # UI/UX design tool
     typora # Markdown single pane editor
     sourcetree # GUI for git and gitflow
-    sherlock # App to edit iOS Views on the fly
     isimulator # App to manage iOS Simulators
     cyberduck # FTP client
 #SECURITY
@@ -53,8 +52,10 @@ nonAppStoreApps=(
     aegisub # Subtitles editor
     flixtools # Subtitles downloader
 #OTHER
+    monitorcontrol # Monitor control works with media keys to set brightness of the display and HDMI output sounds volume
     transmission # Torrents client
     skype # Communicator
+    discord # Text and audio chat
     keka # Rar extractor
     libreoffice # Documents/spreadsheets/presentations editor
     steelseries-engine # Steelseries mouse drivers
@@ -64,31 +65,33 @@ nonAppStoreApps=(
     virtualbox-extension-pack # Extensions for virtualbox such as display resolution and USB
     logitech-camera-settings  #drivers for the webcamera
     signal # End-to-end encrypted messenger
+    heaven # Popular GPU Benchmark
 #Audio 
     kode54-cog # Music and audio player    
     xld # Audio converter
     musicbrainz-picard # Audio tags editor
-#Unused
-#Games: WARNING Most games are 32-bit and won't work on Catalina
+    spotify # Most popular music streaming service
+#Unused by me, but worth considering
+#Games: WARNING Most games are 32-bit and won't work on Catalina or above
     # steam # Biggest gaming platform from Valve
     # gog-galaxy # Gaming platform with huge retro library from CD-Projekt
     # battle-net # Blizzard's gaming platform
     # origin # EA's gaming platform
     # epic-games # Epic's gaming platform
 #Developer
-    # pycharm-ce # Python IDE from JetBrains
+    # pycharm-ce # Python IDE from JetBrains (community edition)
     # webstorm # JavaScript IDE from JetBrains
-    # intellij-idea-ce # Java IDE from JetBrains
+    # intellij-idea-ce # Java IDE from JetBrains (community edition)
     # sublime-text # Cross-platform code editor with it's own high performance rendering engine
+    # atom # Electron-based code editor with community-driven plugins developed by Github
     # macdown # Markdown 2 panes editor
     # dotnet-sdk # Dotnet language support
     # docker # App to make containers for environments 
-    # insomnia # Open source HTTP requests tool
+    # insomnia # Electron-based open source HTTP requests tool
     # paw # MacOS native HTTP requests tool
 	# reveal # App to edit iOS Views on the fly
 #Other
-    # linein # App for redirecting macOS audio between sources
-    # spotify # Most popular music streaming service
+    # linein # App for redirecting macOS audio between sources (Audio  Play-Thru). This may not work with Big Sur. Look at https://www.rogueamoeba.com for alternatives.
     # soundflower # App giving additional audio sources for audio manipulation
     # anki # App for learning with flashcards
     # zoomus # Video conference App
@@ -116,6 +119,7 @@ appStoreApps=(
     497799835 # Xcode (Apple IDE)
     1333542190 # 1Password 7 (Password Manager)
     1091189122 # Bear (Notes with markdown support)
+    692867256 # Simplenote (Notes)
     904280696 # Things 3 (TODO app)
     975937182 # Fantastical 3 (Calendar app)
     1335413823 # Ka-Block! (Ads blocking Safari extension)
@@ -139,6 +143,9 @@ appStoreApps=(
     957734279 # Toggl (Time tracking app)
     411643860 # Daisy Disk (App for recovering disk space)
     1388020431 # DevCleaner for Xcode (App for deleting old Xcode files in ~/Library/Developer folder)
+    1480068668 # Facebook Messenger
+    425264550 # Blackmagic HDD Speed test benchmark
+    1466185689 # Blackmagic CPU/GPU speed benchmark
 #Unused
     # 682658836 # Garage Band (App for creating and learning music)
     # 405399194 # Kindle (Mobi file format reader)
@@ -147,6 +154,7 @@ appStoreApps=(
 )
 
 # Install AppStore apps
+# WARNING: This tool can only reinstall apps that are already tied to you account. If you're downloading something for the first time do it through AppStore
 mas install ${appStoreApps[@]}
 
 # Install terminal colors for Bash (choose between light and dark theme)
@@ -176,8 +184,16 @@ defaults write .GlobalPreferences com.apple.mouse.scaling -1
 # Copy SF Mono font (available only in Xcode and Terminal.app) to the system
 cp -R /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/. /Library/Fonts/
 
-# Use bbedit as a git editor
-git config --global core.editor "bbedit -w"
+# Use VSCode as a git editor, for difftool and mergetool
+git config --global core.editor "code --wait"
+git config --global merge.tool "vscode"
+git config --global mergetool.vscode.cmd "code --wait \$MERGED"
+git config --global diff.tool "vscode"
+git config --global difftool.vscode.cmd "code --wait --diff \$LOCAL \$REMOTE"
+
+# Setup git-delta
+git config --global core.pager "delta --theme='GitHub'"
+git config --global interactive.diffFilter "delta --color-only --theme='GitHub'"
 
 # Remove ALL icons (except Finder) from dock
 echo "Removing all icons (except Finder) from the dock…"
@@ -188,6 +204,7 @@ dockIcons=(
     /System/Applications/Utilities/Terminal.app
     /System/Applications/Mail.app
     /System/Applications/Messages.app
+    /Applications/Signal.app
     /Applications/Slack.app
     /Applications/Safari.app
     /System/Applications/Music.app
@@ -195,7 +212,6 @@ dockIcons=(
     /Applications/Things3.app
     /Applications/Fantastical.app
     /Applications/Sourcetree.app
-    /Applications/BBEdit.app
     "/Applications/Visual Studio Code.app"
     /Applications/Xcode.app
 )
@@ -217,20 +233,22 @@ killall Dock
 brewPackages=(
     swiftlint # Linter for swift language
     carthage # Dependency manager for iOS apps
+    mint # Dependency manager that installs and runs Swift command-line tool packages
     gnupg # OpenPGP for signing and encrypting
     pinentry-mac # App to use macOS native keychain for PGP passwords
     pandoc # Markup to Word/Open office converter needed by Typora
     pandoc-citeproc # Pandoc's citation parser
-    bash # newest bash version. System's default is 3
-    coreutils # GNU File, Shell, and Text utilities
-    dmg2img # Utilities for converting macOS DMG images
-    gzip  # Popular GNU data compression program
-    unzip # Extraction utility for .zip compressed archives
-    wget # Internet file retriever
-    mint # Dependency manager that installs and runs Swift command-line tool packages
+    git-delta # Language syntax-highlighting for git show / git add -p
 #Unused
     # vapor/tap/vapor # backend framework
     # python # Python version 3.7, preinstalled is 2.7
+#Dependencies used to create a macOS VM through https://github.com/myspaghetti/macos-virtualbox    
+    #bash # newest bash version. System's default is 3
+    #coreutils # GNU File, Shell, and Text utilities
+    #dmg2img # Utilities for converting macOS DMG images
+    #gzip  # Popular GNU data compression program
+    #unzip # Extraction utility for .zip compressed archives
+    #wget # Internet file retriever
 )
 
 # install brew packages
@@ -252,6 +270,15 @@ sudo gem install cocoapods
 # install CocoaPods Keys plugin
 sudo gem install cocoapods-keys
 
+# install Push Notification sender for APNS v 1.7.5 working with Catalina
+cd ~/Downloads/ &&
+curl -O -L https://github.com/onmyway133/PushNotifications/releases/download/1.7.5/Push.Notifications-1.7.5-mac.dmg &&
+cd - &&
+hdiutil attach ~/Downloads/Push.Notifications-1.7.5-mac.dmg &&
+cp -a /Volumes/Push\ Notifications\ 1.7.5/Push\ Notifications.app/ /Applications/Push\ Notifications.app &&
+hdiutil unmount /Volumes/Push\ Notifications\ 1.7.5/  &&
+rm -rf ~/Downloads/Push.Notifications-1.7.5-mac.dmg
+
 # Xcode won't ask for password with every build
 DevToolsSecurity -enable
 
@@ -265,9 +292,10 @@ ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents ~/Documents\ sym
 ln -s ~/Desktop ~/Desktop\ symlink
 
 # If you want to make a Developer folder synchronise. 
-# So far only compiling LateX doesn't work in this folder because of "~" sign in the path.
+# WARNING: Do not use this iCloud folder for active development! Store only finished/abandoned projects,
+# as changing git branches with thousands of small files will break the synch.
 
-# mkdir ~/Library/Mobile\ Documents/com~apple~CloudDocs/Developer #if not there yet
+mkdir ~/Library/Mobile\ Documents/com~apple~CloudDocs/Developer
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Developer ~/Developer\ symlink
 
 #Export GPG keys (from the other mac!)
@@ -314,3 +342,10 @@ brew upgrade
 brew cask upgrade
 brew cleanup
 rm -rf ~/Library/Caches/Homebrew
+
+# Visual Studio Code setup
+# * Disable telemetry
+# * Choose SF Mono as a default font
+# * Choose white theme and change ANSI bright blue to feel the same as in Terminal.app
+# For more see settings.json file
+cp ./vscodesettings.json ~/Library/Application\ Support/Code/User/settings.json
