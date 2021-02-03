@@ -104,7 +104,7 @@ nonAppStoreApps=(
 )
 
 # install non-AppStore apps
-brew cask install ${nonAppStoreApps[@]}
+brew install --cask ${nonAppStoreApps[@]}
 
 # Install Battle.net (additional step for battle-net cask)
 # open /usr/local/Caskroom/battle-net/latest/Battle.net-Setup.app
