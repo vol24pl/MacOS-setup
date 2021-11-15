@@ -13,66 +13,68 @@ brew tap homebrew/cask-drivers
 # List of non-AppStore apps
 nonAppStoreApps=(
 #Browsers
-    opera # One of the top browsers with build in VPN
     firefox # Most popular open source browser
-    google-chrome # Most popular browser
-    tor-browser # Browser preconfigured with TOR network
+    brave-browser # Open Source replacement for the Google Chrome with built in adblockers
 #Developer
-    postman # Most popular HTTP requests tool
+    paw # MacOS native HTTP requests tool
     visual-studio-code # Electron-based code editor with community-driven plugins developed by Microsoft
     tableplus # Modern SQL client
     bbedit # Most stable macOS text editor that can handle huge files
-    charles # Web debugging proxy
+    proxyman # Web debugging proxy
     mactex # Full LateX installation with supporting apps, about 4GB!
-    iterm2 # Alternative terminal
     sketch # UI/UX design tool
     zeplin # UI/UX design viewer
-    avocode # UI/UX design tool
     typora # Markdown single pane editor
-    sourcetree # GUI for git and gitflow
-    isimulator # App to manage iOS Simulators
-    cyberduck # FTP client
+    fork # Modern GUI for git and gitflow
 #SECURITY
     protonvpn # VPN from ProtonMail
-    protonmail-bridge # Bridge for email clients to work with ProtonMail
-    authy # 2-factor authenticator
 #HDD
-    drivedx # SMART status and HDD health tool
-    AmorphousDiskMark # HDD benchmarking tool
-    balenaetcher # creating USB drives
-    sdformatter # SD card formatter recommended by SD Association
-    ApplePi-Baker # App for making the binary image copies of the whole drives
+    daisydisk # Daisy Disk (App for recovering disk space)
 #Video
     iina # Best looking macOS video watching app
     vlc # Most popular cross-platform video watching app
     handbrake # Video Transcoder
 #Graphics
-    gimp # Graphics editor
     paintbrush # Simple Microsoft Paint-like drawing tool #WARNING: It changes images DPI!
 #Subtitles
-    aegisub # Subtitles editor
     flixtools # Subtitles downloader
 #OTHER
     monitorcontrol # Monitor control works with media keys to set brightness of the display and HDMI output sounds volume
-    transmission # Torrents client
-    skype # Communicator
-    discord # Text and audio chat
     keka # Rar extractor
     libreoffice # Documents/spreadsheets/presentations editor
-    steelseries-engine # Steelseries mouse drivers
-    bettertouchtool # Custom gestures for touchpad and touchbar, and reverse scrolling setting separate for touchpad and mouse.
-    calibre # Mobi/epub e-book converter
-    virtualbox # Virtual Machine
-    virtualbox-extension-pack # Extensions for virtualbox such as display resolution and USB
-    logitech-camera-settings  #drivers for the webcamera
-    signal # End-to-end encrypted messenger
-    heaven # Popular GPU Benchmark
+    utm # Virtual Machine frontend working with ARM M1 cpu. QEMU under the hood.
 #Audio 
-    kode54-cog # Music and audio player    
-    xld # Audio converter
-    musicbrainz-picard # Audio tags editor
+    cog # Music and audio player    
     spotify # Most popular music streaming service
 #Unused by me, but worth considering
+# Apps that makes sens only for x86
+    # virtualbox # Virtual Machine that can virtualize if you have x86 CPU
+    # virtualbox-extension-pack # Extensions for virtualbox such as display resolution and USB
+# Requires Rosetta 2, not for M1 purist :)
+    # protonmail-bridge # Bridge for email clients to work with ProtonMail
+    # signal # End-to-end encrypted messenger # Join the shitstorm: https://community.signalusers.org/t/apple-silicon-support/19659/23
+    # discord # Text and audio chat # Join the shitstorm https://support.discord.com/hc/en-us/community/posts/360052558393-Discord-on-Apple-M1-Devices
+    # drivedx # SMART status and HDD health tool
+    # sdformatter # SD card formatter recommended by SD Association
+    # logitech-camera-settings  #drivers for the webcamera
+    # authy # 2-factor authenticator # Not ARM ready. For M1 Use this instead https://apps.apple.com/pl/app/twilio-authy/id494168017
+    # aegisub # Subtitles editor
+    # transmission # Torrents client
+    # calibre # Mobi/epub e-book converter
+    # musicbrainz-picard # Audio tags editor
+    # gimp # Graphics editor
+    # ApplePi-Baker # App for making the binary image copies of the whole drives
+    # balenaetcher # creating USB drives
+    # raspberry-pi-imager # creating images for Raspberry Pi
+    # AmorphousDiskMark # HDD benchmarking tool
+    # tor-browser # Browser preconfigured with TOR network
+    # skype # Communicator
+    # cyberduck # FTP client
+# Not signed
+    # xld # Audio converter
+    # isimulator # App to manage iOS Simulators
+# Requires KEXT:
+    # paragon-ntfs # NTFS file system support
 #Games: WARNING Most games are 32-bit and won't work on Catalina or above
     # steam # Biggest gaming platform from Valve
     # gog-galaxy # Gaming platform with huge retro library from CD-Projekt
@@ -88,20 +90,29 @@ nonAppStoreApps=(
     # macdown # Markdown 2 panes editor
     # dotnet-sdk # Dotnet language support
     # docker # App to make containers for environments 
+    # postman # Most popular HTTP requests tool
+    # charles # Web debugging proxy
     # insomnia # Electron-based open source HTTP requests tool
-    # paw # MacOS native HTTP requests tool
 	# reveal # App to edit iOS Views on the fly
+    # iterm2 # Alternative terminal
+    # sourcetree # GUI for git and gitflow. Use Fork instead as Fork does not have problems with GPG keys ;)
+    # avocode # UI/UX design tool
 #Other
+    # steelseries-gg # Steelseries mouse drivers + bloatware. I'm done with Steelseries^^ 
+    # bettertouchtool # Custom gestures for touchpad and touchbar, and reverse scrolling setting separate for touchpad and mouse.
     # linein # App for redirecting macOS audio between sources (Audio  Play-Thru). This may not work with Big Sur. Look at https://www.rogueamoeba.com for alternatives.
-    # soundflower # App giving additional audio sources for audio manipulation
+    # blackhole-2ch # App giving additional audio sources for audio manipulation (2 channels)
+    # blackhole-16ch # App giving additional audio sources for audio manipulation (16 channels)
     # anki # App for learning with flashcards
     # zoomus # Video conference App
     # xquartz # X11 windows server needed for wine
     # wine-stable # App to open Windows .exe files
    	# scroll-reverser # Reverse scrolling setting separate for touchpad and mouse. Use instead of bettertouchtool
     # spotify # Music streaming service
-    # paragon-ntfs # Support for NTFS file system
     # thunderbird # Open Source Email client
+    # heaven # Popular GPU Benchmark
+    # ??? # ManyCam Lite for mac for virtual backgrounds. In development, be patient :)
+    # little-snitch # Blocker for app's unwanted Internet traffic
 )
 
 # install non-AppStore apps
