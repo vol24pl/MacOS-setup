@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # install homebrew apps repositories manager
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Run these two commands in your terminal to add Homebrew to your PATH:
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$(whoami)/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # add repo with drivers to cask (needed for Steelseries Engine and Logitech Camera Settings)
 brew tap homebrew/cask-drivers
