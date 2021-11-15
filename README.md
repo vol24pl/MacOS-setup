@@ -11,13 +11,4 @@ Scripts for setting up a brand new MacOS, and getting it ready to work in no tim
 
 - [ ] Edit template `ssh-config-file-example.txt` and copy it to `~/.ssh/config`
 
-- [ ] Add [GoldenChaos-BTT](https://community.folivora.ai/t/goldenchaos-btt-a-complete-touch-bar-ui-replacement-preset/1281) for BetterTouchTool
-
-
-- [ ] Setup UEFI firmware password and set booting to the strickest setting (only Apple-Signed code)
-
 - [ ] Change monotype font everywhere to: `SF Mono 12`
-
-- [ ] For GPG signing in SourceTree, make sure it's using `/usr/local/Cellar/gnupg/<VERSION-NUMBER>/bin/` as a GPG Program path (and that you made symbolic link from the setup script):
-![SourceTree fix](./images/sourcetree-fix.png)
-
