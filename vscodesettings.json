@@ -1,6 +1,7 @@
 {
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
+    "github.gitAuthentication": false,
+    "search.useIgnoreFiles": false,
     "workbench.colorTheme": "Default Light+",
     "editor.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
     "workbench.startupEditor": "newUntitledFile",
