@@ -205,10 +205,6 @@ git config --global mergetool.vscode.cmd "code --wait \$MERGED"
 git config --global diff.tool "vscode"
 git config --global difftool.vscode.cmd "code --wait --diff \$LOCAL \$REMOTE"
 
-# Setup git-delta
-git config --global core.pager "delta --theme='GitHub'"
-git config --global interactive.diffFilter "delta --color-only --theme='GitHub'"
-
 # Remove ALL icons (except Finder) from dock
 echo "Removing all icons (except Finder) from the dock…"
 defaults write com.apple.dock persistent-apps -array
@@ -224,8 +220,8 @@ dockIcons=(
     /System/Applications/Music.app
     /Applications/Bear.app
     /Applications/Things3.app
-    /Applications/Fantastical.app
-    /Applications/Sourcetree.app
+    /System/Applications/Calendar.app
+    /Applications/Fork.app
     "/Applications/Visual Studio Code.app"
     /Applications/Xcode.app
 )
@@ -251,7 +247,6 @@ brewPackages=(
     gnupg # OpenPGP for signing and encrypting
     pinentry-mac # App to use macOS native keychain for PGP passwords
     pandoc # Markup to Word/Open office converter needed by Typora
-    pandoc-citeproc # Pandoc's citation parser
     git-delta # Language syntax-highlighting for git show / git add -p
 #Unused
     # vapor/tap/vapor # backend framework
@@ -268,6 +263,10 @@ brewPackages=(
 # install brew packages
 brew install ${brewPackages[@]}
 
+# Setup git-delta
+git config --global core.pager "delta --theme='GitHub'"
+git config --global interactive.diffFilter "delta --color-only --theme='GitHub'"
+
 # As we installed homebrew before xcode, we need to switch to Xcode Command Line Tools
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
@@ -281,7 +280,7 @@ mint install ${mintPackages[@]}
 # install CocoaPods dependency manager for iOS apps
 sudo gem install cocoapods
 
-# install CocoaPods Keys plugin
+# install CocoaPods Keys plugin. WARNING: Problems with ARM CPU!
 sudo gem install cocoapods-keys
 
 # install Push Notification sender for APNS v 1.7.5 working with Catalina
@@ -312,6 +311,9 @@ ln -s ~/Desktop ~/Desktop\ symlink
 mkdir ~/Library/Mobile\ Documents/com~apple~CloudDocs/Developer
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Developer ~/Developer\ symlink
 
+# Make pinentry-mac your default pientry choice
+echo "pinentry-program /opt/homebrew/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+
 #Export GPG keys (from the other mac!)
 #Get the keys IDs
 gpg --list-keys
@@ -325,11 +327,6 @@ gpg --export --armor <key> > ./file.gpg
 gpg --import <Path to pub key>
 gpg --allow-secret-key-import --import <Path to prv key>
 
-# Make pinentry-mac your default pientry choice
-echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
-
-# Make SourceTree see our GPG binary file (it searches for gpg2). This should automatically choose the current version
-ln -s /usr/local/Cellar/gnupg/`ls /usr/local/Cellar/gnupg/`/bin/gpg /usr/local/Cellar/gnupg/`ls /usr/local/Cellar/gnupg/`/bin/gpg2
 
 # Configure git
 
@@ -353,9 +350,15 @@ sudo profiles validate -type enrollment
 # Update installed apps and clear caches
 brew update
 brew upgrade
-brew cask upgrade
 brew cleanup
 rm -rf ~/Library/Caches/Homebrew
+
+#If you installed Xcode set CommandLineTools to use the Xcode ones
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
+# and delete other one as described in 
+# https://developer.apple.com/library/archive/technotes/tn2339/_index.html#//apple_ref/doc/uid/DTS40014588-CH1-HOW_CAN_I_UNINSTALL_THE_COMMAND_LINE_TOOLS_
+sudo rm -rf /Library/Developer/CommandLineTools
 
 # Visual Studio Code setup
 # * Disable telemetry
