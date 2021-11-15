@@ -126,16 +126,12 @@ brew install mas
 
 # list of AppStore apps
 appStoreApps=(
-    929507092 # PhotoScape X (Photo Editor)
     593341977 # PDF Attributes (PDF metadata editor)
     497799835 # Xcode (Apple IDE)
     1333542190 # 1Password 7 (Password Manager)
     1091189122 # Bear (Notes with markdown support)
-    692867256 # Simplenote (Notes)
     904280696 # Things 3 (TODO app)
-    975937182 # Fantastical 3 (Calendar app)
     1335413823 # Ka-Block! (Ads blocking Safari extension)
-    768053424 # Gapplin (Vector images viewer/converter)
     803453959 # Slack (Communicator)
     462054704 # Microsoft Word (Documents editor)
     462058435 # Microsoft Excel (Spreadsheets editor)
@@ -143,26 +139,32 @@ appStoreApps=(
     409201541 # Pages (Apple's documents editor)
     409203825 # Numbers (Apple's spreadsheets editor)
     409183694 # Keynote (Apple's presentations editor)
-    1120214373 # Battery Health 2 (Battery stats and health)
     425424353 # The Unarchiver (Archives extractor)
-    1007457278 # Realm Browser (Realm databases browser)
-    1278508951 # Trello (Project management tool)
-    688211836 # EasyRes (resolution changer for retina)
-    1330801220 # quicktype (JSON to Code generator)
     430798174 # HazeOver (App that dims unfocused windows)
-    425955336 # Skitch (App for marking pictures)
-    1081413713 # GIF Brewery 3 (Recording screen or camera stream as a GIF)
-    957734279 # Toggl (Time tracking app)
-    411643860 # Daisy Disk (App for recovering disk space)
     1388020431 # DevCleaner for Xcode (App for deleting old Xcode files in ~/Library/Developer folder)
-    1480068668 # Facebook Messenger
     425264550 # Blackmagic HDD Speed test benchmark
-    1466185689 # Blackmagic CPU/GPU speed benchmark
+    1352778147 # Bitwarden
+    1484801884 # Pomodoro timer
+    441258766 # Magnet. Tool to have a Windows7-like window management by dragging windows. Use instead of bettertouchtool
 #Unused
     # 682658836 # Garage Band (App for creating and learning music)
+    # 408981434 # iMovie (App for filmmaking)
     # 405399194 # Kindle (Mobi file format reader)
     # 985367838 # Microsoft Outlook (Email client)
     # 673660806 # Controllers Lite (Gamepads diagnostics app)
+    # 1466185689 # Blackmagic CPU/GPU speed benchmark
+    # 975937182 # Fantastical (Calendar app)
+# Requires Rosetta 2, not for M1 purist :)
+    # 688211836 # EasyRes (resolution changer for retina)
+    # 1081413713 # GIF Brewery 3 (Recording screen or camera stream as a GIF)
+    # 768053424 # Gapplin (Vector images viewer/converter)
+    # 425955336 # Skitch (App for marking pictures)
+    # 929507092 # PhotoScape X (Photo Editor)
+    # 1480068668 # Facebook Messenger
+    # 1278508951 # Trello (Project management tool)
+    # 957734279 # Toggl (Time tracking app)
+    # 1330801220 # quicktype (JSON to Code generator)
+    # 1007457278 # Realm Browser (Realm databases browser)
 )
 
 # Install AppStore apps
