@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Change login shell to zsh. This is default shell for MacOS Catalina and above, this is only for legacy systems
-# chsh -s /bin/zsh
-
 # install homebrew apps repositories manager
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
