@@ -312,7 +312,7 @@ mkdir ~/Library/Mobile\ Documents/com~apple~CloudDocs/Developer
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Developer ~/Developer\ symlink
 
 # Make pinentry-mac your default pientry choice
-echo "pinentry-program /opt/homebrew/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
 
 #Export GPG keys (from the other mac!)
 #Get the keys IDs
