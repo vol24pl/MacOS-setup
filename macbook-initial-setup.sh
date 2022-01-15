@@ -54,7 +54,7 @@ nonAppStoreApps=(
     # virtualbox-extension-pack # Extensions for virtualbox such as display resolution and USB
 # Requires Rosetta 2, not for M1 purist :)
     # protonmail-bridge # Bridge for email clients to work with ProtonMail
-    # discord # Text and audio chat # Join the shitstorm https://support.discord.com/hc/en-us/community/posts/360052558393-Discord-on-Apple-M1-Devices
+    # discord # Text and audio chat # Beta is supporting M1. Instruction for discord-canary version below.
     # drivedx # SMART status and HDD health tool
     # sdformatter # SD card formatter recommended by SD Association
     # logitech-camera-settings  #drivers for the webcamera
@@ -115,6 +115,10 @@ nonAppStoreApps=(
     # ??? # ManyCam Lite for mac for virtual backgrounds. In development, be patient :)
     # little-snitch # Blocker for app's unwanted Internet traffic
 )
+
+# To get Discord for M1 before it's supported in the main version
+brew tap homebrew/cask-versions                    
+brew install --cask discord-canary
 
 # install non-AppStore apps
 brew install --cask ${nonAppStoreApps[@]}
