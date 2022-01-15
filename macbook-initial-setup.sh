@@ -30,6 +30,7 @@ nonAppStoreApps=(
     protonvpn # VPN from ProtonMail
 #HDD
     daisydisk # Daisy Disk (App for recovering disk space)
+    mounty # NTFS file system write without hassle. No drivers, no kext.
 #Video
     iina # Best looking macOS video watching app
     vlc # Most popular cross-platform video watching app
@@ -39,6 +40,7 @@ nonAppStoreApps=(
 #Subtitles
     flixtools # Subtitles downloader
 #OTHER
+    signal # End-to-end encrypted messenger
     monitorcontrol # Monitor control works with media keys to set brightness of the display and HDMI output sounds volume
     keka # Rar extractor
     libreoffice # Documents/spreadsheets/presentations editor
@@ -52,7 +54,6 @@ nonAppStoreApps=(
     # virtualbox-extension-pack # Extensions for virtualbox such as display resolution and USB
 # Requires Rosetta 2, not for M1 purist :)
     # protonmail-bridge # Bridge for email clients to work with ProtonMail
-    # signal # End-to-end encrypted messenger # Join the shitstorm: https://community.signalusers.org/t/apple-silicon-support/19659/23
     # discord # Text and audio chat # Join the shitstorm https://support.discord.com/hc/en-us/community/posts/360052558393-Discord-on-Apple-M1-Devices
     # drivedx # SMART status and HDD health tool
     # sdformatter # SD card formatter recommended by SD Association
