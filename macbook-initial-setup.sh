@@ -105,7 +105,7 @@ nonAppStoreApps=(
     # blackhole-2ch # App giving additional audio sources for audio manipulation (2 channels)
     # blackhole-16ch # App giving additional audio sources for audio manipulation (16 channels)
     # anki # App for learning with flashcards
-    # zoomus # Video conference App
+    # zoom # Video conference App
     # xquartz # X11 windows server needed for wine
     # wine-stable # App to open Windows .exe files
    	# scroll-reverser # Reverse scrolling setting separate for touchpad and mouse. Use instead of bettertouchtool
