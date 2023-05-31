@@ -219,6 +219,7 @@ dockIcons=(
     /System/Applications/Utilities/Terminal.app
     /System/Applications/Mail.app
     /System/Applications/Messages.app
+    /Applications/Discord.app
     /Applications/Signal.app
     /Applications/Slack.app
     /Applications/Safari.app
