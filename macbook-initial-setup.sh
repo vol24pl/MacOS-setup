@@ -25,6 +25,7 @@ nonAppStoreApps=(
     cyberduck # FTP client
 #SECURITY
     protonvpn # VPN from ProtonMail
+    1password # Password Manager. Use this instead of the deprecated one on the App Store.
 #HDD
     daisydisk # Daisy Disk (App for recovering disk space)
     mounty # NTFS file system write without hassle. No drivers, no kext.
@@ -43,8 +44,10 @@ nonAppStoreApps=(
     keka # Rar extractor
     libreoffice # Documents/spreadsheets/presentations editor
     utm # Virtual Machine frontend working with ARM M1 cpu. QEMU under the hood.
+    scroll-reverser # Reverse scrolling setting separate for touchpad and mouse. Use instead of bettertouchtool
     discord # Text and audio chat
     calibre # Mobi/epub e-book converter
+    logitech-g-hub # Mouse/Keyobard/Camera drivers for Logitech devices
 #Audio 
     cog # Music and audio player    
     spotify # Most popular music streaming service
@@ -57,7 +60,7 @@ nonAppStoreApps=(
     # protonmail-bridge # Bridge for email clients to work with ProtonMail
     # drivedx # SMART status and HDD health tool
     # sdformatter # SD card formatter recommended by SD Association
-    # logitech-camera-settings  #drivers for the webcamera
+    # logitech-camera-settings # Drivers for the webcamera. Included in logitech-g-hub
     # authy # 2-factor authenticator # Not ARM ready. For M1 Use this instead https://apps.apple.com/pl/app/twilio-authy/id494168017
     # aegisub # Subtitles editor
     # transmission # Torrents client
@@ -99,13 +102,12 @@ nonAppStoreApps=(
     # steelseries-gg # Steelseries mouse drivers + bloatware. I'm done with Steelseries^^ 
     # bettertouchtool # Custom gestures for touchpad and touchbar, and reverse scrolling setting separate for touchpad and mouse.
     # linein # App for redirecting macOS audio between sources (Audio  Play-Thru). This may not work with Big Sur. Look at https://www.rogueamoeba.com for alternatives.
-    # blackhole-2ch # App giving additional audio sources for audio manipulation (2 channels)
-    # blackhole-16ch # App giving additional audio sources for audio manipulation (16 channels)
+    # blackhole-2ch # App giving additional audio sources for audio manipulation (2 channels) / Alternative to Soundflower for ARM Macs
+    # blackhole-16ch # App giving additional audio sources for audio manipulation (16 channels) / Alternative to Soundflower for ARM Macs
     # anki # App for learning with flashcards
     # zoom # Video conference App
     # xquartz # X11 windows server needed for wine
     # wine-stable # App to open Windows .exe files
-   	# scroll-reverser # Reverse scrolling setting separate for touchpad and mouse. Use instead of bettertouchtool
     # spotify # Music streaming service
     # thunderbird # Open Source Email client
     # heaven # Popular GPU Benchmark
@@ -130,10 +132,11 @@ brew install mas
 appStoreApps=(
     593341977 # PDF Attributes (PDF metadata editor)
     497799835 # Xcode (Apple IDE)
-    1333542190 # 1Password 7 (Password Manager)
+    1569813296 # 1Password for Safari (Extension for Safari, as the built-in one was deprecated)
     1091189122 # Bear (Notes with markdown support)
     904280696 # Things 3 (TODO app)
     1335413823 # Ka-Block! (Ads blocking Safari extension)
+    1544743900 # Hush (Safari extension that hides cookies consent popups)
     803453959 # Slack (Communicator)
     462054704 # Microsoft Word (Documents editor)
     462058435 # Microsoft Excel (Spreadsheets editor)
@@ -148,8 +151,11 @@ appStoreApps=(
     1352778147 # Bitwarden
     1484801884 # Pomodoro timer
     441258766 # Magnet. Tool to have a Windows7-like window management by dragging windows. Use instead of bettertouchtool
+    972028355 # Micro Snitch. App to monitor the activity of camera and microphone
     688211836 # EasyRes (resolution changer for retina) 
+    1295203466 # Microsoft Remote Desktop. Best remote desktop for controlling Windows PC
 #Unused
+    # 417375580 # Better Snap Tool. Use instead of Magnet if the latter is too expensive.
     # 682658836 # Garage Band (App for creating and learning music)
     # 408981434 # iMovie (App for filmmaking)
     # 405399194 # Kindle (Mobi file format reader)
@@ -157,7 +163,9 @@ appStoreApps=(
     # 673660806 # Controllers Lite (Gamepads diagnostics app)
     # 1466185689 # Blackmagic CPU/GPU speed benchmark
     # 975937182 # Fantastical (Calendar app)
+    # 1438310985 # SimplePing - too see if you have a connection on Status menus. Paid but M1 compatible!
 # Requires Rosetta 2, not for M1 purist :)
+    # 1158928913 # PingStatus - too see if you have a connection on Status menus
     # 1081413713 # GIF Brewery 3 (Recording screen or camera stream as a GIF)
     # 768053424 # Gapplin (Vector images viewer/converter)
     # 425955336 # Skitch (App for marking pictures)
@@ -167,6 +175,7 @@ appStoreApps=(
     # 957734279 # Toggl (Time tracking app)
     # 1330801220 # quicktype (JSON to Code generator)
     # 1007457278 # Realm Browser (Realm databases browser)
+    # 1246969117 # Steam Link (Playing Steam games from remote PC on this macOS)
 )
 
 # Install AppStore apps
