@@ -7,7 +7,7 @@
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$(whoami)/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# add repo with drivers to cask (needed for Steelseries Engine and Logitech Camera Settings)
+# add repo with drivers to cask (needed for Steelseries Engine, Logitech Camera Settings, Logitech G-Hub)
 brew tap homebrew/cask-drivers
 
 # List of non-AppStore apps
@@ -57,6 +57,7 @@ nonAppStoreApps=(
     # virtualbox # Virtual Machine that can virtualize if you have x86 CPU
     # virtualbox-extension-pack # Extensions for virtualbox such as display resolution and USB
 # Requires Rosetta 2, not for M1 purist :)
+# For details look at https://doesitarm.com
     # protonmail-bridge # Bridge for email clients to work with ProtonMail
     # drivedx # SMART status and HDD health tool
     # sdformatter # SD card formatter recommended by SD Association
