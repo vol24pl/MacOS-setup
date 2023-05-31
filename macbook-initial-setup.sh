@@ -26,6 +26,7 @@ nonAppStoreApps=(
     zeplin # UI/UX design viewer
     typora # Markdown single pane editor
     fork # Modern GUI for git and gitflow
+    cyberduck # FTP client
 #SECURITY
     protonvpn # VPN from ProtonMail
 #HDD
@@ -37,6 +38,7 @@ nonAppStoreApps=(
     handbrake # Video Transcoder
 #Graphics
     paintbrush # Simple Microsoft Paint-like drawing tool #WARNING: It changes images DPI!
+    gimp # Graphics editor
 #Subtitles
     flixtools # Subtitles downloader
 #OTHER
@@ -45,6 +47,8 @@ nonAppStoreApps=(
     keka # Rar extractor
     libreoffice # Documents/spreadsheets/presentations editor
     utm # Virtual Machine frontend working with ARM M1 cpu. QEMU under the hood.
+    discord # Text and audio chat
+    calibre # Mobi/epub e-book converter
 #Audio 
     cog # Music and audio player    
     spotify # Most popular music streaming service
@@ -54,23 +58,19 @@ nonAppStoreApps=(
     # virtualbox-extension-pack # Extensions for virtualbox such as display resolution and USB
 # Requires Rosetta 2, not for M1 purist :)
     # protonmail-bridge # Bridge for email clients to work with ProtonMail
-    # discord # Text and audio chat # Beta is supporting M1. Instruction for discord-canary version below.
     # drivedx # SMART status and HDD health tool
     # sdformatter # SD card formatter recommended by SD Association
     # logitech-camera-settings  #drivers for the webcamera
     # authy # 2-factor authenticator # Not ARM ready. For M1 Use this instead https://apps.apple.com/pl/app/twilio-authy/id494168017
     # aegisub # Subtitles editor
     # transmission # Torrents client
-    # calibre # Mobi/epub e-book converter
     # musicbrainz-picard # Audio tags editor
-    # gimp # Graphics editor
     # ApplePi-Baker # App for making the binary image copies of the whole drives
     # balenaetcher # creating USB drives
     # raspberry-pi-imager # creating images for Raspberry Pi
     # AmorphousDiskMark # HDD benchmarking tool
     # tor-browser # Browser preconfigured with TOR network
     # skype # Communicator
-    # cyberduck # FTP client
 # Not signed
     # xld # Audio converter
     # isimulator # App to manage iOS Simulators
@@ -151,6 +151,7 @@ appStoreApps=(
     1352778147 # Bitwarden
     1484801884 # Pomodoro timer
     441258766 # Magnet. Tool to have a Windows7-like window management by dragging windows. Use instead of bettertouchtool
+    688211836 # EasyRes (resolution changer for retina) 
 #Unused
     # 682658836 # Garage Band (App for creating and learning music)
     # 408981434 # iMovie (App for filmmaking)
@@ -160,7 +161,6 @@ appStoreApps=(
     # 1466185689 # Blackmagic CPU/GPU speed benchmark
     # 975937182 # Fantastical (Calendar app)
 # Requires Rosetta 2, not for M1 purist :)
-    # 688211836 # EasyRes (resolution changer for retina)
     # 1081413713 # GIF Brewery 3 (Recording screen or camera stream as a GIF)
     # 768053424 # Gapplin (Vector images viewer/converter)
     # 425955336 # Skitch (App for marking pictures)
