@@ -248,7 +248,7 @@ killall Dock
 brewPackages=(
     swiftlint # Linter for swift language
     carthage # Dependency manager for iOS apps
-    mint # Dependency manager that installs and runs Swift command-line tool packages
+    #mint # Dependency manager that installs and runs Swift command-line tool packages
     gnupg # OpenPGP for signing and encrypting
     pinentry-mac # App to use macOS native keychain for PGP passwords
     pandoc # Markup to Word/Open office converter needed by Typora
@@ -276,11 +276,11 @@ git config --global interactive.diffFilter "delta --color-only --theme='GitHub'"
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
 # List of mint packages
-mintPackages=(
-    MakeAWishFoundation/SwiftyMocky # Library to autogenerate mocks
-)
+#mintPackages=(
+#    MakeAWishFoundation/SwiftyMocky # Library to autogenerate mocks
+#)
 
-mint install ${mintPackages[@]}
+#mint install ${mintPackages[@]}
 
 # install CocoaPods dependency manager for iOS apps
 sudo gem install cocoapods
