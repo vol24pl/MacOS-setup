@@ -12,7 +12,7 @@ nonAppStoreApps=(
     firefox # Most popular open source browser
     brave-browser # Open Source replacement for the Google Chrome with built in adblockers
 #Developer
-    paw # MacOS native HTTP requests tool
+    rapidapi # MacOS native HTTP requests tool (Paw is an old name for the same App).
     visual-studio-code # Electron-based code editor with community-driven plugins developed by Microsoft
     tableplus # Modern SQL client
     bbedit # Most stable macOS text editor that can handle huge files
