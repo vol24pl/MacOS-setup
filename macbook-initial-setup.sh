@@ -12,6 +12,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # add repo with drivers to cask (needed for Steelseries Engine, Logitech Camera Settings, Logitech G-Hub)
 brew tap homebrew/cask-drivers
 
+# List of Apps that have to be downloaded by hand ⚠️ This script only prints them!
+appsToDownloadList=(
+    DaVinci-Resolve # The best free video editor
+)
+echo "⚠️ Please download this apps by hand: ${appsToDownloadList[@]}"
+
 # List of non-AppStore apps
 nonAppStoreApps=(
 #Browsers
