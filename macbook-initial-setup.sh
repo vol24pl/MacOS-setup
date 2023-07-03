@@ -10,7 +10,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # add repo with drivers to cask (needed for Steelseries Engine, Logitech Camera Settings, Logitech G-Hub)
-brew tap homebrew/cask-drivers
+# brew tap homebrew/cask-drivers
 
 # List of Apps that have to be downloaded by hand ⚠️ This script only prints them!
 appsToDownloadList=(
@@ -23,6 +23,7 @@ nonAppStoreApps=(
 #Browsers
     firefox # Most popular open source browser
     brave-browser # Open Source replacement for the Google Chrome with built in adblockers
+    tor-browser # Browser preconfigured with TOR network
 #Developer
     rapidapi # MacOS native HTTP requests tool (Paw is an old name for the same App).
     visual-studio-code # Electron-based code editor with community-driven plugins developed by Microsoft
@@ -61,7 +62,6 @@ nonAppStoreApps=(
     scroll-reverser # Reverse scrolling setting separate for touchpad and mouse. Use instead of bettertouchtool
     discord # Text and audio chat
     calibre # Mobi/epub e-book converter
-    logitech-g-hub # Mouse/Keyobard/Camera drivers for Logitech devices
     protonmail-bridge # Bridge for email clients to work with ProtonMail
     transmission # Torrents client
 #Audio 
@@ -74,6 +74,7 @@ nonAppStoreApps=(
 # Requires Rosetta 2, not for M1 purist :)
 # For details look at https://doesitarm.com
     # sdformatter # SD card formatter recommended by SD Association
+    # logitech-g-hub # Mouse/Keyobard/Camera drivers for Logitech devices
     # logitech-camera-settings # Drivers for the webcamera. Included in logitech-g-hub
     # authy # 2-factor authenticator # Not ARM ready. For M1 Use this instead https://apps.apple.com/pl/app/twilio-authy/id494168017
     # aegisub # Subtitles editor
@@ -81,8 +82,6 @@ nonAppStoreApps=(
     # ApplePi-Baker # App for making the binary image copies of the whole drives
     # balenaetcher # creating USB drives
     # raspberry-pi-imager # creating images for Raspberry Pi
-    # AmorphousDiskMark # HDD benchmarking tool
-    # tor-browser # Browser preconfigured with TOR network
 # Not signed
     # xld # Audio converter
     # isimulator # App to manage iOS Simulators
@@ -165,6 +164,7 @@ appStoreApps=(
     972028355 # Micro Snitch. App to monitor the activity of camera and microphone
     688211836 # EasyRes (resolution changer for retina) 
     1295203466 # Microsoft Remote Desktop. Best remote desktop for controlling Windows PC
+    1168254295 # AmorphousDiskMark. HDD benchmarking tool based on well known CrystalDiskMark
 #Unused
     # 417375580 # Better Snap Tool. Use instead of Magnet if the latter is too expensive.
     # 682658836 # Garage Band (App for creating and learning music)
