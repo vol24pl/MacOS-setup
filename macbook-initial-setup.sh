@@ -283,8 +283,12 @@ brew install ${brewPackages[@]}
 git config --global core.pager "delta --theme='GitHub'"
 git config --global interactive.diffFilter "delta --color-only --theme='GitHub'"
 
-# As we installed homebrew before xcode, we need to switch to Xcode Command Line Tools
+# (Use only if you installed Xcode!) As we installed homebrew before Xcode, we need to switch to Xcode Command Line Tools... 
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
+# (use only if you installed Xcode!) ...and delete the other one as described in 
+# https://developer.apple.com/library/archive/technotes/tn2339/_index.html#//apple_ref/doc/uid/DTS40014588-CH1-HOW_CAN_I_UNINSTALL_THE_COMMAND_LINE_TOOLS_
+sudo rm -rf /Library/Developer/CommandLineTools
 
 # List of mint packages
 #mintPackages=(
@@ -343,7 +347,6 @@ gpg --export --armor <key> > ./file.gpg
 gpg --import <Path to pub key>
 gpg --allow-secret-key-import --import <Path to prv key>
 
-
 # Configure git
 
 # On a specific repository...
@@ -368,13 +371,6 @@ brew update
 brew upgrade
 brew cleanup
 rm -rf ~/Library/Caches/Homebrew
-
-#If you installed Xcode set CommandLineTools to use the Xcode ones
-sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
-
-# and delete other one as described in 
-# https://developer.apple.com/library/archive/technotes/tn2339/_index.html#//apple_ref/doc/uid/DTS40014588-CH1-HOW_CAN_I_UNINSTALL_THE_COMMAND_LINE_TOOLS_
-sudo rm -rf /Library/Developer/CommandLineTools
 
 # Visual Studio Code setup
 # * Disable telemetry
