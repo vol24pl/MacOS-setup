@@ -29,6 +29,7 @@ nonAppStoreApps=(
 #HDD
     daisydisk # Daisy Disk (App for recovering disk space)
     mounty # NTFS file system write without hassle. No drivers, no kext.
+    drivedx # SMART status and HDD health tool
 #Video
     iina # Best looking macOS video watching app
     vlc # Most popular cross-platform video watching app
@@ -40,6 +41,7 @@ nonAppStoreApps=(
     flixtools # Subtitles downloader
 #OTHER
     signal # End-to-end encrypted messenger
+    skype # Communicator
     monitorcontrol # Monitor control works with media keys to set brightness of the display and HDMI output sounds volume
     keka # Rar extractor
     libreoffice # Documents/spreadsheets/presentations editor
@@ -48,6 +50,8 @@ nonAppStoreApps=(
     discord # Text and audio chat
     calibre # Mobi/epub e-book converter
     logitech-g-hub # Mouse/Keyobard/Camera drivers for Logitech devices
+    protonmail-bridge # Bridge for email clients to work with ProtonMail
+    transmission # Torrents client
 #Audio 
     cog # Music and audio player    
     spotify # Most popular music streaming service
@@ -57,20 +61,16 @@ nonAppStoreApps=(
     # virtualbox-extension-pack # Extensions for virtualbox such as display resolution and USB
 # Requires Rosetta 2, not for M1 purist :)
 # For details look at https://doesitarm.com
-    # protonmail-bridge # Bridge for email clients to work with ProtonMail
-    # drivedx # SMART status and HDD health tool
     # sdformatter # SD card formatter recommended by SD Association
     # logitech-camera-settings # Drivers for the webcamera. Included in logitech-g-hub
     # authy # 2-factor authenticator # Not ARM ready. For M1 Use this instead https://apps.apple.com/pl/app/twilio-authy/id494168017
     # aegisub # Subtitles editor
-    # transmission # Torrents client
     # musicbrainz-picard # Audio tags editor
     # ApplePi-Baker # App for making the binary image copies of the whole drives
     # balenaetcher # creating USB drives
     # raspberry-pi-imager # creating images for Raspberry Pi
     # AmorphousDiskMark # HDD benchmarking tool
     # tor-browser # Browser preconfigured with TOR network
-    # skype # Communicator
 # Not signed
     # xld # Audio converter
     # isimulator # App to manage iOS Simulators
