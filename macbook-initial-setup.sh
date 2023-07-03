@@ -117,7 +117,6 @@ nonAppStoreApps=(
     # spotify # Music streaming service
     # thunderbird # Open Source Email client
     # heaven # Popular GPU Benchmark
-    # ??? # ManyCam Lite for mac for virtual backgrounds. In development, be patient :)
     # little-snitch # Blocker for app's unwanted Internet traffic
 )
 
