@@ -208,7 +208,9 @@ sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="jreese"/g' ~/.zshrc
 sed -i -e 's/# export LANG=en_US.UTF-8/export LANG=en_US.UTF-8/g' ~/.zshrc
 
 # Disable mouse acceleration with defaults. Crucial for gaming
-defaults write .GlobalPreferences com.apple.mouse.scaling -1
+# from macOS 14 Sonoma, there's a separate control to set mouse acceleration and speed! 🎉🎉🎉 It took only 40 years 🙃
+# I'm commenting out this command as a form of deprecation. I'll remove this command in the near future.
+# defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
 # Copy SF Mono font (available only in Xcode and Terminal.app) to the system
 cp -R /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/. /Library/Fonts/
