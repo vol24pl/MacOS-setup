@@ -173,7 +173,6 @@ appStoreApps=(
     # 1480068668 # Facebook Messenger
     # 1278508951 # Trello (Project management tool)
     # 957734279 # Toggl (Time tracking app)
-    # 1330801220 # quicktype (JSON to Code generator)
     # 1007457278 # Realm Browser (Realm databases browser)
     # 1246969117 # Steam Link (Playing Steam games from remote PC on this macOS)
 )
